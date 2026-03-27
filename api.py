@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Allow requests from any origin (Google Sites, etc.)
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=False)
 
 # ── Ink color table (3,219 colors) ───────────────────────────────────────
 # Auto-generated from Pantone_Solid_Coated_2024_V5.acb
